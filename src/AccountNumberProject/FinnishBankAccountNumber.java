@@ -32,10 +32,14 @@ public class FinnishBankAccountNumber {
             }
         }
         
+        
+        
         /*removes all non-digits from account number string*/
         String parsedAccNumber = accNumber.replaceAll("\\D+","");
         int accNumberLength= parsedAccNumber.length();
-        
+        if(accNumberLength < 8 || accNumberLength > 14) {
+            return 0;
+        }
         
         StringBuilder sb = new StringBuilder(parsedAccNumber);
         
