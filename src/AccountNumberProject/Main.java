@@ -1,12 +1,12 @@
 /*
     Task for Visma Solutions
     
+ 
+    @author Johannes Kohvakka
  */
 package AccountNumberProject;
 import java.util.Scanner;
-/*
- * @author Johannes Kohvakka
- */
+
 public class Main {
 
   
@@ -20,7 +20,7 @@ public class Main {
         
 
     }
-    
+    /*Simple text user interface*/
     static public void menu() {
         
         

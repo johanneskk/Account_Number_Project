@@ -1,6 +1,10 @@
 package AccountNumberProject;
 import java.lang.*;
 
+
+/*Class checks if the account number is valid using Luhns algorithm
+and modifies the short form of the number to the long form*/
+
 public class FinnishBankAccountNumber {
     private final String accNumber;
         
@@ -25,7 +29,7 @@ public class FinnishBankAccountNumber {
     public long getLongFormat() {
         
         
-        /*dash have to be 7. mark if account number is in short form*/
+        /*dash have to be 7th mark if account number is in short form*/
         if(accNumber.contains("-") && accNumber.indexOf("-")!= 6) {
             if (accNumber.length()!= 14) {
                 return 0;
@@ -86,6 +90,7 @@ public class FinnishBankAccountNumber {
             /*Every other number multiplied by 2 and added to sum*/
             if(i%2 == 0) {
                 int currentNum = Character.getNumericValue(longAccString.charAt(i));
+                
                 /*If the result of multiplication is 10 or over,
                 numbers are separated and added to sum separately*/
                 
